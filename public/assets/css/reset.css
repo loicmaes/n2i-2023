@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, textarea {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+img, svg, video {
+    max-width: 100%;
+}
+
+img, video {
+    display: block;
+}

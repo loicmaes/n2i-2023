@@ -1,0 +1,7 @@
+$bp: ('xsmall': '600px', 'small': '800px', 'medium': '1024px', 'large': '1440px', 'xlarge': '1920px');
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($bp, $size)) {
+    @content;
+  }
+}
