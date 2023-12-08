@@ -20,6 +20,7 @@ button, input, textarea {
 
 a, button {
     cursor: pointer;
+    color: currentColor;
 }
 
 a {

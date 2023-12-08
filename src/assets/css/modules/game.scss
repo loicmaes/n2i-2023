@@ -1,0 +1,44 @@
+@use '../variables';
+
+.game {
+  gap: 1.5em;
+  display: flex;
+  padding: 3.5em;
+  min-height: 100vh;
+  flex-direction: column;
+
+  > * {
+    flex: 0 0 auto;
+  }
+
+  &--thumb {
+    width: 100%;
+    display: block;
+    flex: 1 1 100%;
+    max-width: 75%;
+    align-self: center;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--_bg-url);
+  }
+
+  &--ctx {
+    font-weight: 600;
+    font-size: 1.15em;
+    font-style: italic;
+    padding: .75rem 1.5rem;
+    background-color: variables.$bg-accent;
+    border: 2px solid rgba(variables.$text, .1);
+  }
+
+  &--next {
+    align-self: end;
+    padding: .75em 1.5em;
+    transition: background-color 80ms ease-in-out;
+    background-color: var(--_bg, variables.$bg-accent);
+
+    &:hover {
+      --_bg: #{variables.$gray-btn-bg};
+    }
+  }
+}

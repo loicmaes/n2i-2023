@@ -1,0 +1,64 @@
+@use '../variables';
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.page {
+  gap: 1.5em;
+  width: 45%;
+  display: flex;
+  min-width: 10em;
+  padding: 4em 3em 3em;
+  flex-direction: column;
+  background-color: variables.$bg-accent;
+
+  &--title {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+
+  &--cta {
+    padding: .75em 1.5em;
+    color: variables.$btn-color;
+    transition: background-color 150ms ease-in-out;
+    background-color: var(--_bg, variables.$btn-bg);
+
+    &:hover {
+      --_bg: #{variables.$btn-bg-hover}
+    }
+  }
+
+  &--action {
+    line-height: 1;
+    align-self: start;
+    position: relative;
+    isolation: isolate;
+    opacity: var(--_opacity, .7);
+    transition: opacity 150ms ease-in-out;
+
+    &::after {
+      inset: 0;
+      content: '';
+      z-index: -1;
+      opacity: .2;
+      translate: 0 10%;
+      position: absolute;
+      transform-origin: bottom;
+      scale: 1 var(--_y-scale, .2) 1;
+      transition: scale 150ms ease-in-out;
+      background-color: variables.$primary;
+    }
+
+    &:hover {
+      --_opacity: 1;
+      --_y-scale: .8;
+    }
+  }
+}

@@ -7,6 +7,6 @@
 
 html {
   color: variables.$text;
-  background-color: variables.$background;
+  background-color: variables.$bg;
 }
 </style>
