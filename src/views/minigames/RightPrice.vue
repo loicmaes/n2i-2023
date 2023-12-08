@@ -33,7 +33,6 @@ export default {
       if (!answer) return
 
       try {
-        console.log(this.round)
         const { data } = await axios.post(`/round/answer/right_price/${this.round.round_id}`, {
           answer
         })
@@ -70,7 +69,7 @@ export default {
   <div class="game">
     <span class="game--thumb" :style="`--_bg-url: url('${thumbnail}')`"></span>
     <p class="game--ctx">{{ context }}</p>
-    <p class="game--indication" v-if="tries > 0">{{ tries < 10 ? lang.right_price.steps_left.replace('%dir', dir).replace('%tries', tries) : lang.right_price.first_step }}</p>
+    <p class="game--indication" v-if="tries > 0">{{ tries < 3 ? lang.right_price.steps_left.replace('%dir', dir).replace('%tries', tries) : lang.right_price.first_step }}</p>
 
     <form @submit.prevent="sendTry" class="game__line">
       <div class="game__line--field">
