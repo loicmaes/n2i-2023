@@ -7,7 +7,7 @@ export default {
   components: {Field},
   data: () => ({
     timeout: false,
-    tries: 10,
+    tries: 3,
     dir: undefined
   }),
   computed: {
